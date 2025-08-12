@@ -1,26 +1,20 @@
 
 <template>
 
-<img src="../src/assets/tr.jpeg" alt="Описание"><br><br>
+<img src="../src/assets/tr.jpg" alt="Описание"><br><br>
 
 <div class="container">
 	<div class="input">
 		<input type="text" v-model="a" placeholder="a">
-		<input type="text" v-model="b" placeholder="b">
-		<input type="text" v-model="c" placeholder="c">
 		<input type="text" v-model="d" placeholder="d">
 		<input type="text" v-model="e" placeholder="e">
-		<input type="text" v-model="f" placeholder="f">
 		<input type="text" v-model="g" placeholder="g">
 	</div>
 
 	<div class="result">
 		<p>a = {{ resultA }}</p>
-		<p>b = {{ resultB }}</p>
-		<p>c = {{ resultC }}</p>
 		<p>d = {{ resultD }}</p>
 		<p>e = {{ resultE }}</p>
-		<p>f = {{ resultF }}</p>
 		<p>g = {{ resultG }}</p>
 	</div>
 
@@ -66,13 +60,13 @@ export default {
 				this.resultC = this.e
 				this.resultB = this.e
 
-				this.a = (this.e * this.e) * 2
+				//this.a = (this.e * this.e) * 2
 				
-				this.resultA = Math.sqrt(this.a)
+				this.resultA =  Math.sqrt((this.e * this.e) * 2)//Math.sqrt(this.a)
 
 				if(this.g !=0){
 					this.resultG = this.g
-					this.resultD = this.g
+					this.resultD = this.g - this.b
 					this.resultF = this.g - this.b
 				}
 			}else if(this.a !=0){
